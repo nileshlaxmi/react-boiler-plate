@@ -1,0 +1,33 @@
+@import './variable.scss';
+@import './mixins.scss';
+
+* {
+  background-color: $base-color;
+
+  button {
+    outline: none;
+    border: none;
+  }
+}
+
+.error-box-wrap {
+  @include error-box;
+
+  .error-box-message {
+    width: 100%;
+  }
+  .error-box-icon {
+    top: 5px;
+    position: relative;
+    height: $fourteenpx;
+  }
+}
+
+.actions{
+  cursor: pointer;
+
+  img{
+    height: 16px;
+    width: 16px;
+  }
+}

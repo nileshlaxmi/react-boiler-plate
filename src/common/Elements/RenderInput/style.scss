@@ -1,0 +1,34 @@
+@import '../../../resources/scss/variable.scss';
+@import '../../../resources/scss/mixins.scss';
+
+.form-input {
+  &__page-property-block {
+    display: flex;
+    flex-direction: row;
+    padding: 0 8px 8px 8px;
+  }
+  &__property-block {
+    display: flex;
+    flex-direction: row;
+  }
+  &__label-field {
+    @include label-field;
+  }
+
+  &__form-control {
+    @include input-field;
+    background-color: $white;
+    color: $input-text;
+
+    &--disabled {
+      @include input-field;
+      background-color: $border-grey;
+      color: $input-text;
+      opacity: 0.7;
+    }
+  }
+
+  &__input-field {
+    flex-grow: 1;
+  }
+}
